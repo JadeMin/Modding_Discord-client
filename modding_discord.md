@@ -43,7 +43,7 @@ mainWindow.webContents.on('dom-ready', () => {
 This will load the file located at `C:/discord.js` into the discord client.
 You can change this path to any path convenient to you.
 
-You will then need to repack this code with into the asar file. To do this, run:
+You will then need to repack this code into the asar file. To do this, run:
 
 `asar pack unpacked core.asar`
 
@@ -100,7 +100,7 @@ window.XMLHttpRequest.prototype.setRequestHeader = function() {
 function sendMessage(msg,channel){
 	if(!authTokenObtained){
 		console.log("Unable to send message without authToken.");
-		console.log("Try typing in a chat something to obtain the token.");
+		console.log("Try typing something in a chat to obtain the token.");
 	}
 	channel_url = `https://discordapp.com/api/v6/channels/${channel}/messages`;
 
@@ -119,7 +119,7 @@ Now, once you reload discord, you can see the channel id name of somebody next t
 Also, when opening the console (with Ctrl+Shift+I) inside discord, you can run:
 `sendMessage("<your message here>","<the channel id here>");` which will send a message in the corresponding channel.
 
-You can use the same stuff to listen to incomming messages (you override the AJAX request callbacks to the access to fetched messages)
+You can use the same stuff to listen to incomming messages (you override the AJAX request callbacks to get access to the messages fetched by discord)
 You can also edit the `discord.js` file to change the css. The code above already does that to make usernames selectable.
 
 Now, you can write in the console something like for example:
