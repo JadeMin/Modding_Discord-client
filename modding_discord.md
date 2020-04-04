@@ -21,7 +21,7 @@ asar can when be installed with `npm install asar -g`
 Then go to the following directory: `%AppData%/Discord/<some version>/modules/discord_desktop_core`
 You will find a file named `core.asar`
 
-Asar file work find of like zip files. You should make a backup of the file as we are going to modify it.
+asar files work find of like zip files. You should make a backup of the file as we are going to modify it.
 
 To unpack the file, run `asar extract core.asar unpacked`
 This will create an `unpacked` folder. Inside, search for `app/mainScreen.js`.
@@ -41,7 +41,14 @@ mainWindow.webContents.on('dom-ready', () => {
 });
 ```
 This will load the file located at `C:/discord.js` into the discord client.
-You can change this path by any path convenient to you.
+You can change this path to any path convenient to you.
+
+You will then need to repack this code with into the asar file. To do this, run:
+
+`asar pack unpacked core.asar`
+
+This will override the `core.asar` file so making a backup is important here.
+
 When, create the js file at `C:/discord.js` and add the following inside:
 (You can customize this to do other stuff)
 ```js
@@ -63,7 +70,7 @@ window.XMLHttpRequest.prototype.open = function() {
 		(function(url){
 			setTimeout(function(){ // wait for the ui to update.
 				let elements = document.getElementsByTagName('h3');
-        // We update the UI to display the channel name.
+       				// We update the UI to display the channel name.
 				if(elements.length >= 1 && elements[0].style.userSelect !== "text"){ // add channel URL to name
 					elements[0].style.userSelect = "text";
 					elements[0].innerHTML += " | "+url.substring("https://discordapp.com/api/v6/channels".length);
@@ -115,7 +122,7 @@ Also, when opening the console (with Ctrl+Shift+I) inside discord, you can run:
 You can use the same stuff to listen to incomming messages (you override the AJAX request callbacks to the access to fetched messages)
 You can also edit the `discord.js` file to change the css. The code above already does that to make usernames selectable.
 
-Now, you can for example write in the console something like:
+Now, you can write in the console something like for example:
 ```js
 setTimeout(function(){
   sendMessage("I'm still online, I am not afk","<the channel id>");
