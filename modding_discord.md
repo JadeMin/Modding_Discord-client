@@ -13,11 +13,14 @@ Most of this will also work on Linux and Mac but the directories will not be the
 ## How to mod discord ?
 
 First install `npm` and `asar`
+
 npm can be installed from here: https://nodejs.org/en/ (it's bundled with nodejs)
+
 asar can when be installed with `npm install asar -g`
 
 Then go to the following directory: `%AppData%/Discord/<some version>/modules/discord_desktop_core`
 You will find a file named `core.asar`
+
 Asar file work find of like zip files. You should make a backup of the file as we are going to modify it.
 
 To unpack the file, run `asar extract core.asar unpacked`
