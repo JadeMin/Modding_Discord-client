@@ -18,7 +18,7 @@ npm can be installed from here: https://nodejs.org/en/ (it's bundled with nodejs
 
 asar can when be installed with `npm install asar -g`
 
-Then go to the following directory: `%AppData%/Discord/<some version>/modules/discord_desktop_core`
+Then go to the following directory: `%LocalAppData%/Discord/app-<some version>/modules/discord_desktop_core-<number>/discord_desktop_core/`
 You will find a file named `core.asar`
 
 asar files work find of like zip files. You should make a backup of the file as we are going to modify it.
