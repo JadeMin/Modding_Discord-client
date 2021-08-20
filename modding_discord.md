@@ -28,10 +28,10 @@ This will create an `unpacked` folder. Inside, search for `app/mainScreen.js`.
 This is the js file we will edit to inject js code into Discord.
 
 I suggest adding the following lines (put you could add anything else depending on the feature you want)
-At line ~350, inside the object `webPreferences` add the property: `nodeIntegration: true`.
+At line ~350, inside the object `mainWindowOptions.webPreferences` add the property: `nodeIntegration: true`.
 This will allow you to access node js function from inside discord to write files for example.
 
-At line ~380, in the scope of launchMainAppWindow, add:
+At line ~440, in the scope of launchMainAppWindow, add:
 ```js
 const fs = require('fs');
 mainWindow.webContents.on('dom-ready', () => {
