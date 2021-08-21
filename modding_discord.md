@@ -27,9 +27,10 @@ To unpack the file, run `asar extract core.asar unpacked`
 This will create an `unpacked` folder. Inside, search for `app/mainScreen.js`.
 This is the js file we will edit to inject js code into Discord.
 
-I suggest adding the following lines (put you could add anything else depending on the feature you want)
+I suggest adding the following lines (but you could add anything else depending on the feature you want):
+
 At line ~350, inside the object `mainWindowOptions.webPreferences` add the property: `nodeIntegration: true`.
-This will allow you to access node js function from inside discord to write files for example.
+This will allow you to access node js functions from inside discord to write files for example.
 
 At line ~440, in the scope of launchMainAppWindow, add:
 ```js
