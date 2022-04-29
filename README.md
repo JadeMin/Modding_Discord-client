@@ -14,7 +14,7 @@ Most of this will also work on Linux and Mac but the directories will not be the
 
 First install `npm` and `asar`
 
-npm can be installed from here: https://nodejs.org/en/ (it's bundled with nodejs)
+npm can be installed from here: https://nodejs.org/ (it's bundled with nodejs)
 
 asar can when be installed with `npm install asar -g`
 
