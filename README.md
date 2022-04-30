@@ -1,4 +1,4 @@
-# Modding the discord client (FORKED & MODIFIED FROM [VANYLE's GIST](//gist.github.com/vanyle/edbdd0c28a0150af3b905b99a4c48f00))
+# Modding the discord client (FORKED FROM [VANYLE's GIST](//gist.github.com/vanyle/edbdd0c28a0150af3b905b99a4c48f00))
 Disclaimer: Modding the discord client is against Discord's term of service. I'm not responsible if any action is taken against you.
 ## Why modding ?
 Modding the client will allow you to customize to: 
